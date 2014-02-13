@@ -18,5 +18,20 @@
   "bugs": {
     "url": "https://github.com/dead-horse/nodeclub/issues"
   },
-  "homepage": "https://github.com/dead-horse/nodeclub"
+  "homepage": "https://github.com/dead-horse/nodeclub",
+  "dependencies": {
+    "graceful": "0.0.5",
+    "koa": "0.4.0",
+    "koa-favicon": "1.0.1",
+    "koa-redis": "0.0.5",
+    "koa-rt": "0.0.2",
+    "koa-sess": "0.0.8",
+    "logfilestream": "0.1.0",
+    "mkdirp": "0.3.5",
+    "moment": "2.5.1",
+    "ms": "0.6.2"
+  },
+  "devDependencies": {
+    "autod": "*"
+  }
 }

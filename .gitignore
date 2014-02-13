@@ -1,4 +1,4 @@
-lib-cov
+coverage.html
 *.seed
 *.log
 *.csv
@@ -11,5 +11,7 @@ pids
 logs
 results
 
-npm-debug.log
 node_modules
+npm-debug.log
+config/config.js
+.DS_store

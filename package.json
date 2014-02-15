@@ -4,7 +4,8 @@
   "description": "A forum system for tiny community base on koa and mysql",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "dev": "node_modules/.bin/gnode dispatch"
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,19 @@
     "koa": "0.4.0",
     "koa-favicon": "1.0.1",
     "koa-redis": "0.0.5",
+    "koa-resource-router": "0.2.0",
+    "koa-router": "3.0.2",
     "koa-rt": "0.0.2",
     "koa-sess": "0.0.8",
     "logfilestream": "0.1.0",
     "mkdirp": "0.3.5",
     "moment": "2.5.1",
-    "ms": "0.6.2"
+    "ms": "0.6.2",
+    "mysql": "2.0.1",
+    "thunkify": "0.0.1"
   },
   "devDependencies": {
-    "autod": "*"
+    "autod": "*",
+    "gnode": "*"
   }
 }

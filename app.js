@@ -9,14 +9,15 @@
 /**
  * Module dependencies.
  */
-
 var koa = require('koa');
 var http = require('http');
 var rt = require('koa-rt');
 var favicon = require('koa-favicon');
+var router = require('koa-router');
 var logger = require('./common/logger');
 var session = require('./common/session');
 var config = require('./config');
+var routes = require('./routes');
 
 var app = koa();
 
@@ -28,10 +29,10 @@ app.proxy = true; // to support `X-Forwarded-*` header
 app.use(favicon());
 app.use(rt());
 app.use(session);
+app.use(router(app));
 
-app.use(function * () {
-  this.body = '<h3>Hello! node club!</h3>';
-});
+// load routers
+routes(app);
 
 app.on('error', function (err) {
   if (!err.status || err.status >= 500) {

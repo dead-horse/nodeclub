@@ -25,7 +25,22 @@ var config = {
   debug: true, // if debug
   logdir: path.join(root, '.tmp', 'logs'),
   viewCache: false,
-  cookieKeys: ['nodeclub secret', 'haha other key']
+  cookieKeys: ['nodeclub secret', 'haha other key'],
+
+  mysql: {
+    servers: [
+      {
+        host: 'keydiary.mysql.rds.aliyuncs.com', // 'db4free.net'
+        port: 3306,
+        user: 'nodeclub_dev',
+        password: 'nodeclub_dev'
+      }
+    ],
+    database: 'nodeclub_dev',
+    maxConnections: 4,
+    queryTimeout: 5000,
+  },
+
 };
 
 // load config/config.js, everything in config.js will cover the same key in index.js

@@ -10,7 +10,7 @@
  */
 
 var mysql = require('../common/mysql');
-var thunkify = require('thunkify');
+var thunkify = require('thunkify-wrap');
 
 var columns = ' id, name, email, avatar_url as avatar, location, company, blog, \
   followers, following, block, gmt_create ';
@@ -25,9 +25,4 @@ exports.addUser = function (params, callback) {
   mysql.query(ADD_USER_SQL, args, callback);
 };
 
-exports.addUser = function (params, callback) {
-  mysql.query('show tables', callback);
-};
-
-exports.addUser = thunkify(exports.addUser);
-
+module.exports = thunkify(exports);

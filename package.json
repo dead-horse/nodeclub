@@ -34,7 +34,7 @@
     "moment": "2.5.1",
     "ms": "0.6.2",
     "mysql": "2.0.1",
-    "thunkify": "0.0.1"
+    "thunkify-wrap": "0.0.1"
   },
   "devDependencies": {
     "autod": "*",

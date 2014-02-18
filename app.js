@@ -14,6 +14,9 @@ var http = require('http');
 var rt = require('koa-rt');
 var favicon = require('koa-favicon');
 var router = require('koa-router');
+var bodyParser = require('koa-bodyparser');
+var csrf = require('koa-csrf');
+var csrfMiddleware = require('./middleware/csrf');
 var logger = require('./common/logger');
 var session = require('./common/session');
 var config = require('./config');
@@ -26,9 +29,13 @@ app.outputErrors = config.debug;
 app.keys = config.cookieKeys;
 app.proxy = true; // to support `X-Forwarded-*` header
 
+csrf(app);
+
 app.use(favicon());
 app.use(rt());
 app.use(session);
+app.use(bodyParser());
+app.use(csrfMiddleware);
 app.use(router(app));
 
 // load routers

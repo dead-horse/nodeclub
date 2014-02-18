@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/dead-horse/nodeclub",
   "dependencies": {
-    "graceful": "0.0.5",
+    "graceful": "0.0.6",
     "koa": "0.4.0",
+    "koa-bodyparser": "0.0.1",
+    "koa-csrf": "1.0.1",
     "koa-favicon": "1.0.1",
     "koa-redis": "0.0.5",
     "koa-resource-router": "0.2.0",

@@ -28,7 +28,6 @@ var pool = mysql.createPool({
 exports.pool = pool;
 
 exports.query = function (sql, values, callback) {
-  console.log(arguments);
   pool.query(sql, values, callback);
 };
 

@@ -6,7 +6,7 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL COMMENT 'user email',
   `password` varchar(100) NOT NULL COMMENT 'user encrypted password',
   `blog` varchar(256) COMMENT 'user blog',
-  `avatar_url` varchar(256) COMMENT 'user avatar url',
+  `avatar` varchar(256) COMMENT 'user avatar url',
   `location` varchar(100) COMMENT 'user location',
   `company` varchar(100) COMMENT 'user company',
   `followers` bigint(20) unsigned NOT NULL DEFAULT 0 COMMENT 'user followers number',
